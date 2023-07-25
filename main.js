@@ -8,24 +8,25 @@ function usdCalculator(price, usdValue) {
 }
 
 while (menu) {
-    let opt = prompt('Bienvenido ' + userName + '. Eliga una opcion \n 1- Calculadora dolares/pesos \n 2- Cambiar el valor del dolar (El valor actual es de: ' + usdValue +')' + '\n 0- Salir')
+    let opt = prompt('Bienvenido, ' + userName + '. Eliga una opción \n 1- Calculadora dólares/pesos \n 2- Cambiar el valor del dólar (El valor actual es de: ' + usdValue +')' + '\n 3- Salir')
     switch (opt){
         
-        case '0':
-        menu = false
-        break;
-
+        
         case '1':
-        let price = prompt('Por favor ingrese el precio en dolares del producto que desee calcular en pesos') 
-        alert('El valor que consulto en pesos es de: ' + usdCalculator(price, usdValue))
-        break;
-
+            let price = prompt('Por favor ingrese el precio en dólares del producto que desee calcular en pesos') 
+            alert('El valor que consultó en pesos es de: ' + usdCalculator(price, usdValue))
+            break;
+            
         case '2':
-        usdValue = prompt('Ingrese el valor del Dolar por el que desea reemplazar el valor actual, el valor actual es: ' + usdValue)    
-        break;
-
+            usdValue = prompt('Ingrese el valor del Dólar por el que desea reemplazar el valor actual. El valor actual es: ' + usdValue)    
+            break;
+                
+        case '3':
+            menu = false
+            break;
+            
         default:
-        alert('Ingrese una opcion valida')
+        alert('Ingrese una opción valida')
         break;
     }
 }
